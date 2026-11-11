@@ -110,8 +110,8 @@ uint8_t ESP8266_Init(ESP8266_Mode_t mode, UART_HandleTypeDef huart)
 uint8_t ESP8266_wifiConnect(const char *ssid, const char *pass)
 {
     char cmd[128];
-    const char *target_ssid = (ssid != NULL && strlen(ssid) > 0) ? ssid : "SNUC";
-    const char *target_pass = (pass != NULL && strlen(pass) > 0) ? pass : "snu12345";
+    const char *target_ssid = (ssid != NULL && strlen(ssid) > 0) ? ssid : "YOUR_WIFI_SSID";
+    const char *target_pass = (pass != NULL && strlen(pass) > 0) ? pass : "YOUR_WIFI_PASSWORD";
     sprintf(cmd, "AT+CWJAP=\"%s\",\"%s\"\r\n", target_ssid, target_pass);
     return ESP_Send_Wait(cmd, "WIFI GOT IP", 15000);
 }
