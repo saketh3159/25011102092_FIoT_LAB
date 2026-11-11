@@ -27,13 +27,13 @@ The experiment demonstrates configuring an ESP8266 Wi-Fi module as a TCP server 
 
 **Working Principle:**
 
-The STM32 sends AT command packets over USART1 to configure the ESP8266 into Station mode, connect to Wi-Fi SSID "SNUC", enable multiple socket connections (`AT+CIPMUX=1`), and launch the TCP server on port 80 (`AT+CIPSERVER=1,80`).
+The STM32 sends AT command packets over USART1 to configure the ESP8266 into Station mode, connect to Wi-Fi SSID "YOUR_WIFI_SSID", enable multiple socket connections (`AT+CIPMUX=1`), and launch the TCP server on port 80 (`AT+CIPSERVER=1,80`).
 
 **Pseudocode:**
 
 1. Send AT to confirm communication.
 2. Send AT+CWMODE=1 to set station mode.
-3. Send AT+CWJAP="SNUC","snu12345" to connect to Wi-Fi.
+3. Send AT+CWJAP="YOUR_WIFI_SSID","YOUR_WIFI_PASSWORD" to connect to Wi-Fi.
 4. Send AT+CIFSR to retrieve allocated IP address.
 5. Send AT+CIPMUX=1 to allow multiple incoming connections.
 6. Send AT+CIPSERVER=1,80 to start TCP server on port 80.
