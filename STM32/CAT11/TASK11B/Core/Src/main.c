@@ -139,8 +139,8 @@ int main(void)
         case SERVER_CONFIG_MODE:
           if (now - state_tick > 1000)
           {
-            send_uart2("[3/6] Joining Wi-Fi network 'SNUC'...\r\n");
-            send_esp("AT+CWJAP=\"SNUC\",\"snu12345\"\r\n");
+            send_uart2("[3/6] Joining Wi-Fi network 'YOUR_WIFI_SSID'...\r\n");
+            send_esp("AT+CWJAP=\"YOUR_WIFI_SSID\",\"YOUR_WIFI_PASSWORD\"\r\n");
             init_state = SERVER_CONFIG_WIFI;
             state_tick = now;
           }
