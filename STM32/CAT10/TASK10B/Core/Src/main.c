@@ -44,7 +44,7 @@ uint8_t esp_rx = 0;
 uint8_t pc_rx = 0;
 char at_cmd[] = "AT\r\n";
 char mode_cmd[] = "AT+CWMODE=1\r\n";
-char join_cmd[] = "AT+CWJAP=\"SNUC\",\"snu12345\"\r\n";
+char join_cmd[] = "AT+CWJAP=\"YOUR_WIFI_SSID\",\"YOUR_WIFI_PASSWORD\"\r\n";
 char ip_cmd[] = "AT+CIFSR\r\n";
 /* USER CODE END PV */
 
