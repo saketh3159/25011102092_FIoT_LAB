@@ -3,7 +3,7 @@
 **Course Code:** 25CS2741  
 **Course Title:** Fundamentals of Internet of Things + Lab  
 **Institution:** Shiv Nadar University, Chennai — Department of Computer Science & Engineering  
-**Academic Year:** II Year / 3rd Semester B. Tech CSE (IoT) Section A   
+**Academic Year:** II Year / 3rd Semester B. Tech CSE (IoT) Section B
 **Student Name:** SAKETH PATRI  
 **Student Register Number:** 25011102092  
 
