@@ -80,11 +80,11 @@ int main(void)
   uint32_t now = 0;
   char cmd_at[] = "AT\r\n";
   char cmd_mode[] = "AT+CWMODE=1\r\n";
-  char cmd_join[] = "AT+CWJAP=\"SNUC\",\"snu12345\"\r\n";
+  char cmd_join[] = "AT+CWJAP=\"YOUR_WIFI_SSID\",\"YOUR_WIFI_PASSWORD\"\r\n";
   char cmd_ip[] = "AT+CIFSR\r\n";
   char log_at[] = "[IOT] Sending AT Ping...\r\n";
   char log_mode[] = "[IOT] Setting Wi-Fi Station Mode (AT+CWMODE=1)...\r\n";
-  char log_join[] = "[IOT] Connecting to Wi-Fi SSID 'SNUC'...\r\n";
+  char log_join[] = "[IOT] Connecting to Wi-Fi SSID 'YOUR_WIFI_SSID'...\r\n";
   char log_ip[] = "[IOT] Querying Allocated Station IP (AT+CIFSR)...\r\n";
   char log_ready[] = "[IOT] Device Provisioned! Entering Passthrough Mode.\r\n> ";
   /* USER CODE END 1 */
