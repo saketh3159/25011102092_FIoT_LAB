@@ -115,7 +115,7 @@ int main(void)
 
       /* Generate Dynamic JSON String */
       snprintf(json_body, sizeof(json_body),
-               "{\"device\":\"NUCLEO_F401RE\",\"reg_no\":\"25011102018\",\"temp_c\":%.2f,\"humidity\":%.2f,\"pressure_hpa\":%.2f,\"uptime_ms\":%lu}",
+               "{\"device\":\"NUCLEO_F401RE\",\"reg_no\":\"25011102092\",\"temp_c\":%.2f,\"humidity\":%.2f,\"pressure_hpa\":%.2f,\"uptime_ms\":%lu}",
                temperature, humidity, pressure, (unsigned long)now);
 
       content_len = strlen(json_body);
