@@ -1,10 +1,11 @@
-# 25011102018_FIoT_LAB — Foundations of Internet of Things + Lab
+# 25011102092_FIoT_LAB — Foundations of Internet of Things + Lab
 
 **Course Code:** 25CS2741  
 **Course Title:** Fundamentals of Internet of Things + Lab  
 **Institution:** Shiv Nadar University, Chennai — Department of Computer Science & Engineering  
 **Academic Year:** II Year / 3rd Semester B. Tech CSE (IoT) Section A   
-**Student Register Number:** 25011102018  
+**Student Name:** SAKETH PATRI  
+**Student Register Number:** 25011102092  
 
 ---
 
@@ -21,7 +22,7 @@ The laboratory syllabus spans two distinct microcontroller architectures:
 ## 2. Repository Structure
 
 ```text
-25011102018_FIoT_LAB/
+25011102092_FIoT_LAB/
 │
 ├── README.md                           # Master repository documentation & course index
 ├── .gitignore                          # Clean build tracking (tracks .hex, ignores temp build files)
@@ -669,8 +670,8 @@ Every experiment and task strictly adheres to the standardized documentation for
   - STM32 NUCLEO-F401RE (`STM32F401RET6`, ARM Cortex-M4 with FPU @ 84 MHz, 512 KB Flash, 96 KB SRAM, integrated ST-LINK/V2-1 debugger).
 
 ### 7.2 Wi-Fi & MQTT Credentials (CAT 11, 13, 14)
-- **Wi-Fi Access Point SSID:** `SNUC`
-- **Wi-Fi WPA2 Passphrase:** `snu12345`
+- **Wi-Fi Access Point SSID:** `YOUR_WIFI_SSID`
+- **Wi-Fi WPA2 Passphrase:** `YOUR_WIFI_PASSWORD`
 - **MQTT Public Broker:** `broker.emqx.io` (TCP Port 1883)
 - **Primary MQTT Topics:**
   - Environmental Telemetry: `stm32/test/data`
