@@ -99,7 +99,7 @@ void main(void)
 
     /* Task 7A: Dual-Row String Display */
     lcd_goto(0, 0);
-    lcd_puts("25011102018 FIoT");
+    lcd_puts("25011102092 FIoT");
 
     lcd_goto(1, 0);
     lcd_puts("LCD 16x2 4-Bit OK");
