@@ -19,7 +19,7 @@ The experiment demonstrates an integrated smart IoT edge device acquiring BME280
 - **Development Board / Core:** STM32 NUCLEO-F401RE
 - **Microcontroller IC:** STM32F401RET6 (ARM Cortex-M4 @ 84 MHz)
 - **GPIO Pin(s) / Peripherals:** PB8/PB9 (I2C1 - BME280), PA9/PA10 (USART1 - ESP8266), PA2/PA3 (USART2 - PC)
-- **Power Supply / Interface:** broker.emqx.io (TCP Port 1883) + Wi-Fi "SNUC"
+- **Power Supply / Interface:** broker.emqx.io (TCP Port 1883) + Wi-Fi "YOUR_WIFI_SSID"
 
 ![Circuit Diagram](circuit.png)
 
@@ -33,7 +33,7 @@ The firmware integrates I2C sensor acquisition, Bosch compensation, JSON payload
 
 1. Initialize I2C1 and USART peripherals.
 2. Bring up BME280 sensor and read calibration coefficients.
-3. Connect ESP8266 to Wi-Fi SSID "SNUC".
+3. Connect ESP8266 to Wi-Fi SSID "YOUR_WIFI_SSID".
 4. Connect MQTT client to broker "broker.emqx.io" on port 1883.
 5. In loop: read BME280, formulate JSON payload, publish to topic stm32/test/data.
 6. Verify message receipt in Node-RED MQTT Subscriber or MQTTX tool.
