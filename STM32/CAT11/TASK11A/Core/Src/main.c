@@ -51,14 +51,14 @@ int main(void)
 
   char cmd_at[]     = "AT\r\n";
   char cmd_mode[]   = "AT+CWMODE=1\r\n";
-  char cmd_join[]   = "AT+CWJAP=\"SNUC\",\"snu12345\"\r\n";
+  char cmd_join[]   = "AT+CWJAP=\"YOUR_WIFI_SSID\",\"YOUR_WIFI_PASSWORD\"\r\n";
   char cmd_ip[]     = "AT+CIFSR\r\n";
   char cmd_mux[]    = "AT+CIPMUX=1\r\n";
   char cmd_server[] = "AT+CIPSERVER=1,80\r\n";
 
   char log_at[]     = "[1/6] Sending AT ping to ESP8266...\r\n";
   char log_mode[]   = "[2/6] Configuring Station Mode (AT+CWMODE=1)...\r\n";
-  char log_join[]   = "[3/6] Connecting to Wi-Fi SSID 'SNUC'...\r\n";
+  char log_join[]   = "[3/6] Connecting to Wi-Fi SSID 'YOUR_WIFI_SSID'...\r\n";
   char log_ip[]     = "[4/6] Querying Station IP Address (AT+CIFSR)...\r\n";
   char log_mux[]    = "[5/6] Enabling Multiple Connections (AT+CIPMUX=1)...\r\n";
   char log_server[] = "[6/6] Starting TCP Server on Port 80 (AT+CIPSERVER=1,80)...\r\n";
