@@ -31,7 +31,7 @@ The firmware implements an AT-command-based MQTT state machine: it initializes t
 
 **Pseudocode:**
 
-1. Connect to Wi-Fi access point "SNUC".
+1. Connect to Wi-Fi access point "YOUR_WIFI_SSID".
 2. Issue AT+MQTTUSERCFG to set client ID "STM32_Node".
 3. Issue AT+MQTTCONN to connect to broker.emqx.io on port 1883.
 4. Format telemetry payload: {"uptime": ..., "status": "ONLINE"}.
