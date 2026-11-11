@@ -3,8 +3,8 @@
 
 #include "main.h"
 
-#define WIFI_SSID "SNUC"
-#define WIFI_PASS "snu12345"
+#define WIFI_SSID "YOUR_WIFI_SSID"
+#define WIFI_PASS "YOUR_WIFI_PASSWORD"
 #include <stdint.h>
 #include <stdbool.h>
 
