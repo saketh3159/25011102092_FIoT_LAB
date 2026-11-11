@@ -107,7 +107,7 @@ int main(void)
   HAL_UART_Transmit(&huart2, (uint8_t *)id_msg, strlen(id_msg), HAL_MAX_DELAY);
 
   /* Connect ESP8266 to Wi-Fi Access Point */
-  ESP8266_wifiConnect("SNUC", "snu12345");
+  ESP8266_wifiConnect("YOUR_WIFI_SSID", "YOUR_WIFI_PASSWORD");
   /* USER CODE END 2 */
 
   /* Infinite loop */
