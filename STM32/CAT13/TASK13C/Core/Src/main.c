@@ -53,7 +53,7 @@ char http_packet[512];
 char cip_start[] = "AT+CIPSTART=\"TCP\",\"192.168.1.100\",1880\r\n";
 char cip_send[32];
 char debug_msg[128];
-char wifi_cmd[] = "AT+CWJAP=\"SNUC\",\"snu12345\"\r\n";
+char wifi_cmd[] = "AT+CWJAP=\"YOUR_WIFI_SSID\",\"YOUR_WIFI_PASSWORD\"\r\n";
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -123,7 +123,7 @@ int main(void)
 
       /* Formulate JSON telemetry */
       snprintf(json_body, sizeof(json_body),
-               "{\"device\":\"NUCLEO_F401RE\",\"reg_no\":\"25011102018\",\"temp_c\":%.2f,\"hum\":%.2f,\"press\":%.2f}",
+               "{\"device\":\"NUCLEO_F401RE\",\"reg_no\":\"25011102092\",\"temp_c\":%.2f,\"hum\":%.2f,\"press\":%.2f}",
                temperature, humidity, pressure);
 
       body_len = strlen(json_body);
