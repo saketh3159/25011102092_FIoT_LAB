@@ -16,7 +16,7 @@ This repository maintains the complete laboratory experiment submissions, hardwa
 
 The laboratory syllabus spans two distinct microcontroller architectures:
 1. **8051 Architecture (CAT 2 to CAT 7 — 13 Evaluated Tasks):** Bare-metal Embedded C targeting the Atmel/Microchip **AT89S52** microcontroller development board. All peripherals are controlled through direct register-level memory-mapped I/O access with Keil µVision C51.
-2. **STM32 Architecture (CAT 8 to CAT 14 — 20 Evaluated Tasks):** ARM Cortex-M based embedded firmware development using **STM32CubeMX**, **Keil MDK-ARM**, and the **STM32 HAL (Hardware Abstraction Layer)** targeting the STM32 Blue Pill (STM32F103C8T6) and NUCLEO-F401RE (STM32F401RET6) development platforms.
+2. **STM32 Architecture (CAT 8 to CAT 15 — 21 Evaluated Tasks):** ARM Cortex-M based embedded firmware development using **STM32CubeMX**, **Keil MDK-ARM**, and the **STM32 HAL (Hardware Abstraction Layer)** targeting the STM32 Blue Pill (STM32F103C8T6) and NUCLEO-F401RE (STM32F401RET6) development platforms.
 
 ---
 
@@ -443,7 +443,7 @@ The laboratory syllabus spans two distinct microcontroller architectures:
     │   ├── circuit.png             # CAT13 complete hardware schematic
     │   └── README.md               # CAT13 evaluation overview
     │
-    └── CAT14/                           # Continuous Lab Evaluation-14: Environmental Sensing & MQTT Client API (ESPLib)
+    ├── CAT14/                           # Continuous Lab Evaluation-14: Environmental Sensing & MQTT Client API (ESPLib)
         ├── TASK14/                      # Dedicated Task: End-to-End Environmental Sensing (BME280) - MQTT Client (ESPLib)
         │   ├── TASK14.ioc              # STM32CubeMX configuration file
         │   ├── .mxproject              # STM32CubeMX project metadata descriptor
@@ -482,6 +482,17 @@ The laboratory syllabus spans two distinct microcontroller architectures:
         │   └── README.md               # Task technical report & inferences
         ├── circuit.png             # CAT14 complete hardware schematic
         └── README.md               # CAT14 evaluation overview
+    │
+    └── CAT15/                           # BME280 environmental monitoring and MQTT
+        ├── TASK15/                      # CubeMX and Keil project, task README and circuit
+        │   ├── Core/                    # Application source and headers
+        │   ├── Drivers/                 # CMSIS and STM32 HAL
+        │   ├── MDK-ARM/                 # Keil project and startup file
+        │   ├── IOT_project.ioc
+        │   ├── circuit.png
+        │   └── README.md
+        ├── circuit.png
+        └── README.md
 ```
 
 ---
@@ -491,9 +502,9 @@ The laboratory syllabus spans two distinct microcontroller architectures:
 ### 3.1 Folder Organization
 
 - Separate directories are maintained for each hardware platform (8051/ and STM32/).
-- Each Continuous Assessment evaluation has a dedicated parent folder (CAT2 through CAT14).
+- Each Continuous Assessment evaluation has a dedicated parent folder (CAT2 through CAT15).
 - Every individual task is isolated within its own dedicated subfolder (TASKxA, TASKxB, etc.).
-- Uniform directory hierarchy and standardized naming are preserved across all 40 tasks.
+- Uniform directory hierarchy and standardized naming are preserved across all 41 tasks.
 
 ### 3.2 Required Documentation
 
@@ -587,7 +598,7 @@ Every experiment and task strictly adheres to the standardized documentation for
 
 ---
 
-## 6. Master Index of Continuous Lab Evaluations (CAT 2 to CAT 14 — 40 Tasks)
+## 6. Master Index of Continuous Lab Evaluations (CAT 2 to CAT 15 — 41 Tasks)
 
 ### 6.1 Course Evaluation Syllabus & Experiment Overview
 
@@ -606,6 +617,7 @@ Every experiment and task strictly adheres to the standardized documentation for
 | **[CAT 12](STM32/CAT12/)** | 19/10/2026 | STM32F401RE Cortex-M4: GPIO & User Input Programming | STM32 NUCLEO-F401RE (STM32F401RET6) | • [TASK 12A: User LED LD2 Bring-Up (PA5)](STM32/CAT12/TASK12A/)<br>• [TASK 12B: Push Button B1 Latching State](STM32/CAT12/TASK12B/)<br>• [TASK 12C: Press Duration Classifier](STM32/CAT12/TASK12C/) | **PASSED** |
 | **[CAT 13](STM32/CAT13/)** | 19/10/2026 | BME280 Data Acquisition & HTTP Cloud Ingestion | STM32 NUCLEO-F401RE + BME280 + ESP8266 | • [TASK 13A: BME280 Bosch Driver Integration](STM32/CAT13/TASK13A/)<br>• [TASK 13B: JSON Formulation & HTTP POST](STM32/CAT13/TASK13B/)<br>• [TASK 13C: Node-RED Pipeline & Analytics](STM32/CAT13/TASK13C/) | **PASSED** |
 | **[CAT 14](STM32/CAT14/)** | 27/10/2026 | BME280 Interfacing (I2C) & MQTT Cloud Analytics | STM32 NUCLEO-F401RE + BME280 + ESP8266 + Node-RED | • [TASK 14: Integrated Smart Edge Node](STM32/CAT14/TASK14/)<br>• [TASK 14A: BME280 I2C Sensing](STM32/CAT14/TASK14A/)<br>• [TASK 14B: MQTT Cloud Analytics](STM32/CAT14/TASK14B/) | **PASSED** |
+| **[CAT 15](STM32/CAT15/)** | Not specified | BME280 Environmental Monitoring & MQTT Telemetry | STM32F401RE + BME280 + ESP8266 | • [TASK 15: Environmental Monitoring & MQTT](STM32/CAT15/TASK15/) | **NOT VERIFIED** |
 
 ---
 
@@ -636,7 +648,7 @@ Every experiment and task strictly adheres to the standardized documentation for
 | **CAT 7 - TASK 7B** | [8051/CAT7/TASK7B/](8051/CAT7/TASK7B/) | [circuit.png](8051/CAT7/TASK7B/circuit.png) | [README.md](8051/CAT7/TASK7B/README.md) | TASK7B.hex | **PASSED** |
 | **CAT 7 - TASK 7C** | [8051/CAT7/TASK7C/](8051/CAT7/TASK7C/) | [circuit.png](8051/CAT7/TASK7C/circuit.png) | [README.md](8051/CAT7/TASK7C/README.md) | TASK7C.hex | **PASSED** |
 
-#### Part II: STM32 Microcontroller (ARM Cortex-M & HAL — 20 Tasks)
+#### Part II: STM32 Microcontroller (ARM Cortex-M & HAL — 21 Tasks)
 
 | Task | Evaluated Directory | Circuit Diagram | Documentation | Project Files | Evaluation Status |
 |---|---|:---:|:---:|:---:|:---:|
@@ -660,6 +672,7 @@ Every experiment and task strictly adheres to the standardized documentation for
 | **CAT 14 - TASK 14** | [STM32/CAT14/TASK14/](STM32/CAT14/TASK14/) | [circuit.png](STM32/CAT14/TASK14/circuit.png) | [README.md](STM32/CAT14/TASK14/README.md) | TASK14.ioc, MDK-ARM/ | **PASSED** |
 | **CAT 14 - TASK 14A** | [STM32/CAT14/TASK14A/](STM32/CAT14/TASK14A/) | [circuit.png](STM32/CAT14/TASK14A/circuit.png) | [README.md](STM32/CAT14/TASK14A/README.md) | TASK14A.ioc, MDK-ARM/ | **PASSED** |
 | **CAT 14 - TASK 14B** | [STM32/CAT14/TASK14B/](STM32/CAT14/TASK14B/) | [circuit.png](STM32/CAT14/TASK14B/circuit.png) | [README.md](STM32/CAT14/TASK14B/README.md) | TASK14B.ioc, MDK-ARM/ | **PASSED** |
+| **CAT 15 - TASK 15** | [STM32/CAT15/TASK15/](STM32/CAT15/TASK15/) | [circuit.png](STM32/CAT15/TASK15/circuit.png) | [README.md](STM32/CAT15/TASK15/README.md) | IOT_project.ioc, MDK-ARM/ | **NOT VERIFIED** |
 ---
 
 ## 7. Hardware Platform Specifications & Network Configuration
